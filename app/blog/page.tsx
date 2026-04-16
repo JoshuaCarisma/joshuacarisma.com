@@ -11,7 +11,7 @@ export default function Blog() {
   const posts = getAllPosts()
 
   return (
-    <div className="space-y-8">
+    <div className="mx-auto max-w-3xl px-4 py-12 space-y-8">
       <h1 className="text-3xl font-bold tracking-tight">Blog</h1>
 
       <p className="text-gray-600">

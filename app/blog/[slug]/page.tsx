@@ -26,7 +26,7 @@ export default function BlogPost({ params }: Props) {
   if (!post) notFound()
 
   return (
-    <article className="space-y-8">
+    <article className="mx-auto max-w-3xl px-4 py-12 space-y-8">
       <header className="space-y-2">
         <Link
           href="/blog"
