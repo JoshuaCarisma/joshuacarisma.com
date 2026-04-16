@@ -1,129 +1,49 @@
 # joshuacarisma.com
-My personal website
 
-┌──────────────────────────────────────────────────────────────┐
-│ TOP NAV                                                      │
-│ Joshua Carisma | About | Life & Work | Projects | Writing    │
-│ Coaching | Professional | Contact                            │
-└──────────────────────────────────────────────────────────────┘
+Personal website for Joshua Carisma — coach, builder, and systems thinker exploring the future of health, work, and human growth.
 
+## Tech Stack
 
-┌──────────────────────────────────────────────────────────────┐
-│ HERO: THE WHOLE PERSON                                        │
-│                                                              │
-│ [Warm Personal Headshot / Lifestyle Visual]                   │
-│                                                              │
-│ I’m Joshua Carisma — a coach, builder, and systems thinker    │
-│ exploring the future of health, work, and human growth.       │
-│                                                              │
-│ My work connects healthcare, coaching, technology, project    │
-│ management, and personal development through one question:    │
-│ how do we build better systems for people to grow?            │
-│                                                              │
-│ [Start Here] [Explore Projects] [Read My Story]               │
-└──────────────────────────────────────────────────────────────┘
+- **Framework:** Next.js 14 (App Router)
+- **Styling:** Tailwind CSS
+- **Blog:** MDX
+- **Hosting:** Vercel
+- **Domain:** joshuacarisma.com (via Porkbun)
 
+## Pages
 
-┌──────────────────────────────────────────────────────────────┐
-│ WHAT CONNECTS MY WORK                                         │
-│                                                              │
-│ I care about health, systems, leadership, and helping people  │
-│ become more capable in their own lives. Whether I’m working   │
-│ in healthcare operations, coaching, or building technical     │
-│ projects, the deeper mission is the same: improve the systems │
-│ that shape human growth.                                     │
-└──────────────────────────────────────────────────────────────┘
+| Page | Route | Description |
+|------|-------|-------------|
+| Home | `/` | Hero, featured projects, writing preview |
+| About | `/about` | Full story and background |
+| Projects | `/projects` | Portfolio of work |
+| Writing | `/blog` | Essays and articles |
+| Coaching | `/coaching` | Coaching work |
+| Contact | `/contact` | Get in touch |
 
+## Getting Started
 
-┌──────────────────────────────────────────────────────────────┐
-│ LIFE & WORK FACETS                                            │
-│                                                              │
-│ ┌───────────────┐ ┌───────────────┐ ┌───────────────┐        │
-│ │ Healthcare    │ │ Coaching &    │ │ Technology &  │        │
-│ │ Operations    │ │ Behavior      │ │ Analytics     │        │
-│ │               │ │ Change        │ │               │        │
-│ └───────────────┘ └───────────────┘ └───────────────┘        │
-│                                                              │
-│ ┌───────────────┐ ┌───────────────┐ ┌───────────────┐        │
-│ │ Project       │ │ Writing &     │ │ Leadership &  │        │
-│ │ Management    │ │ Philosophy    │ │ Service       │        │
-│ └───────────────┘ └───────────────┘ └───────────────┘        │
-└──────────────────────────────────────────────────────────────┘
+Clone the repo and run locally:
 
+```bash
+git clone git@github.com:JoshuaCarisma/joshuacarisma.com.git
+cd joshuacarisma.com
+npm install
+npm run dev
+```
 
-┌──────────────────────────────────────────────────────────────┐
-│ MY STORY                                                      │
-│                                                              │
-│ From communication and media production to health coaching    │
-│ and healthcare operations, my path has always centered on     │
-│ people, systems, and execution.                               │
-│                                                              │
-│ I’ve learned how to coordinate teams, support complex         │
-│ workflows, build client-facing systems, and communicate       │
-│ across different worlds.                                      │
-│                                                              │
-│ [Read the Full Story]                                         │
-└──────────────────────────────────────────────────────────────┘
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+## Project Structure
 
-┌──────────────────────────────────────────────────────────────┐
-│ FEATURED PROJECTS                                             │
-│                                                              │
-│ ┌────────────────────┐ ┌────────────────────┐ ┌────────────┐ │
-│ │ Body By Carisma    │ │ Coach Carisma      │ │ GitHub     │ │
-│ │ Health coaching    │ │ Philosophy,        │ │ Apps, data,│ │
-│ │ business, client   │ │ education, habits, │ │ dashboards,│ │
-│ │ systems, programs  │ │ self-mastery       │ │ technical  │ │
-│ │ [Visit Site]       │ │ [Explore]          │ │ projects   │ │
-│ └────────────────────┘ └────────────────────┘ └────────────┘ │
-│                                                              │
-│ ┌────────────────────┐ ┌────────────────────┐                │
-│ │ Blog / Essays      │ │ Professional Work  │                │
-│ │ Healthcare, PM,    │ │ Healthcare ops,    │                │
-│ │ technology,        │ │ project support,   │                │
-│ │ leadership         │ │ systems thinking   │                │
-│ └────────────────────┘ └────────────────────┘                │
-└──────────────────────────────────────────────────────────────┘
+```
+app/          # Pages (Next.js App Router)
+components/   # Nav, Footer, shared UI
+content/blog/ # MDX blog posts
+public/       # Images and static assets
+lib/          # Utilities
+```
 
+## Deployment
 
-┌──────────────────────────────────────────────────────────────┐
-│ MY GUIDING QUESTIONS                                          │
-│                                                              │
-│ How can healthcare become more human and effective?           │
-│ How can prevention become more central to care?               │
-│ How can technology reduce waste instead of creating noise?    │
-│ How can better systems help people live better lives?         │
-└──────────────────────────────────────────────────────────────┘
-
-
-┌──────────────────────────────────────────────────────────────┐
-│ WRITING & REFLECTIONS                                         │
-│                                                              │
-│ A living archive of ideas on health, systems, project         │
-│ management, technology adoption, self-mastery, and leadership.│
-│                                                              │
-│ [Read Essays]                                                 │
-└──────────────────────────────────────────────────────────────┘
-
-
-┌──────────────────────────────────────────────────────────────┐
-│ PROFESSIONAL DIRECTION                                        │
-│                                                              │
-│ My professional path is moving toward healthcare coordination,│
-│ project management, and health service leadership. I’m        │
-│ especially interested in better processes, preventive health, │
-│ aging population needs, emerging technologies, and healthcare │
-│ systems improvement.                                          │
-│                                                              │
-│ [View Resume] [Connect on LinkedIn]                           │
-└──────────────────────────────────────────────────────────────┘
-
-
-┌──────────────────────────────────────────────────────────────┐
-│ CONTACT / CONNECT                                             │
-│                                                              │
-│ Reach out for professional opportunities, collaborations,     │
-│ interviews, coaching conversations, or aligned projects.       │
-│                                                              │
-│ [Email] [LinkedIn] [GitHub] [Coach Carisma] [Body By Carisma] │
-└──────────────────────────────────────────────────────────────┘
+Deployed automatically via Vercel on every push to `main`.
