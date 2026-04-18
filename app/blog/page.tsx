@@ -4,7 +4,7 @@ import { getAllPosts } from '@/lib/posts'
 
 export const metadata: Metadata = {
   title: 'Blog',
-  description: 'Thoughts on software, design, and building things.',
+  description: 'Essays on health, systems thinking, self-mastery, and the examined life.',
 }
 
 export default function Blog() {
@@ -15,7 +15,7 @@ export default function Blog() {
       <h1 className="text-3xl font-bold tracking-tight">Blog</h1>
 
       <p className="text-gray-600">
-        Thoughts on software, design, and building things.
+        Essays on health, systems thinking, self-mastery, and the examined life.
       </p>
 
       {posts.length === 0 ? (

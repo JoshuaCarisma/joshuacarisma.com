@@ -93,15 +93,15 @@ const articles = [
 
 export default function Home() {
   return (
-    <div className="bg-white text-black overflow-x-hidden">
+    <div className="overflow-x-hidden">
 
       {/* ── HERO ─────────────────────────────────────────────────────────────── */}
-      <section className="px-6 pt-16 pb-14 md:pt-20 md:pb-16">
+      <section className="px-6 pt-8 pb-7 md:pt-10 md:pb-8">
         <h1 className="font-inter font-black leading-none tracking-[-0.04em] text-black text-[clamp(3rem,9.5vw,7.5rem)]">
           Joshua Carisma
         </h1>
 
-        <hr className="border-t border-black mt-6 mb-6" />
+        <hr className="border-t border-black mt-3 mb-3" />
 
         <div className="flex flex-col sm:flex-row sm:justify-between gap-2 text-[#888888] text-xs tracking-[0.15em] uppercase">
           <span>Coach &amp; Systems Thinker</span>
@@ -109,7 +109,7 @@ export default function Home() {
           <span>Working Globally</span>
         </div>
 
-        <div className="mt-14 md:mt-20 flex justify-center">
+        <div className="mt-7 md:mt-10 mb-7 md:mb-8 flex justify-center">
           <p className="font-playfair italic text-[clamp(1.25rem,2.5vw,1.75rem)] text-black leading-relaxed text-center max-w-3xl">
             [A coach, builder, and systems thinker exploring the future of
             health, work, and human growth.]
@@ -121,9 +121,9 @@ export default function Home() {
       <HeroPhoto />
 
       {/* ── FEATURED PROJECTS ────────────────────────────────────────────────── */}
-      <section className="py-24 md:py-32 px-6">
+      <section className="py-12 md:py-16 px-6">
         <FadeIn>
-          <h2 className="text-center font-inter font-bold text-[clamp(2rem,4vw,3rem)] tracking-tight mb-16 md:mb-20">
+          <h2 className="text-center font-inter font-bold text-[clamp(2rem,4vw,3rem)] tracking-tight mb-8 md:mb-10">
             Featured Projects
           </h2>
         </FadeIn>
@@ -137,7 +137,7 @@ export default function Home() {
               >
                 {/* Image placeholder */}
                 <div className="aspect-[4/3] bg-[#F2F1EE] w-full overflow-hidden">
-                  <div className="w-full h-full bg-[#F2F1EE] group-hover:scale-[1.02] transition-transform duration-500" />
+                  <div className="w-full h-full group-hover:scale-[1.02] transition-transform duration-500" />
                 </div>
                 {/* Info */}
                 <div className="px-6 py-5">
@@ -153,10 +153,10 @@ export default function Home() {
       </section>
 
       {/* ── WHAT I DO ────────────────────────────────────────────────────────── */}
-      <section className="py-24 md:py-32 px-6 border-t border-black">
+      <section className="py-12 md:py-16 px-6 border-t border-black">
         <div className="max-w-4xl mx-auto">
           <FadeIn>
-            <h2 className="text-center font-inter font-bold text-[clamp(2rem,4vw,3rem)] tracking-tight mb-16 md:mb-20">
+            <h2 className="text-center font-inter font-bold text-[clamp(2rem,4vw,3rem)] tracking-tight mb-8 md:mb-10">
               What I Do
             </h2>
           </FadeIn>
@@ -167,7 +167,7 @@ export default function Home() {
               delay={i * 50}
               className={`border-b border-black/10 ${i === 0 ? 'border-t' : ''}`}
             >
-              <div className="flex items-start gap-8 py-7">
+              <div className="flex items-start gap-8 py-4">
                 <span className="font-inter text-sm text-[#888888] w-12 shrink-0 pt-0.5 tabular-nums">
                   [{service.num}]
                 </span>
@@ -186,26 +186,26 @@ export default function Home() {
       </section>
 
       {/* ── WRITING & ARTICLES ───────────────────────────────────────────────── */}
-      <section className="py-24 md:py-32 px-6 border-t border-black">
+      <section className="py-12 md:py-16 px-6 border-t border-black">
         <FadeIn>
-          <h2 className="text-center font-inter font-bold text-[clamp(2rem,4vw,3rem)] tracking-tight mb-16 md:mb-20">
+          <h2 className="text-center font-inter font-bold text-[clamp(2rem,4vw,3rem)] tracking-tight mb-8 md:mb-10">
             Writing &amp; Articles
           </h2>
         </FadeIn>
 
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10 md:gap-8">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6 md:gap-5">
           {articles.map((article, i) => (
             <FadeIn key={article.title} delay={i * 100}>
               <Link href={article.href} className="group block">
                 {/* Image placeholder */}
-                <div className="aspect-[3/2] bg-[#F2F1EE] mb-5 overflow-hidden">
-                  <div className="w-full h-full bg-[#F2F1EE] group-hover:scale-[1.02] transition-transform duration-500" />
+                <div className="aspect-[3/2] bg-[#F2F1EE] mb-3 overflow-hidden">
+                  <div className="w-full h-full group-hover:scale-[1.02] transition-transform duration-500" />
                 </div>
 
-                <p className="text-[#888888] text-xs tracking-[0.12em] uppercase mb-3">
+                <p className="text-[#888888] text-xs tracking-[0.12em] uppercase mb-2">
                   {article.date}&nbsp;&nbsp;·&nbsp;&nbsp;{article.readTime}
                 </p>
-                <h3 className="font-inter font-bold text-base leading-snug text-black mb-2 group-hover:opacity-60 transition-opacity">
+                <h3 className="font-inter font-bold text-base leading-snug text-black mb-1 group-hover:opacity-60 transition-opacity">
                   {article.title}
                 </h3>
                 <p className="text-[#888888] text-sm leading-relaxed">
@@ -216,7 +216,7 @@ export default function Home() {
           ))}
         </div>
 
-        <FadeIn className="mt-16 flex justify-center">
+        <FadeIn className="mt-8 flex justify-center">
           <Link
             href="/blog"
             className="border border-black text-black text-sm font-medium px-7 py-3 hover:bg-black hover:text-white transition-colors"
