@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import FadeIn from '@/components/FadeIn'
 import HeroPhoto from '@/components/HeroPhoto'
@@ -14,19 +15,28 @@ export const metadata: Metadata = {
 
 const projects = [
   {
-    title: 'Body By Carisma',
-    tags: 'Health Coaching | Client Systems',
+    title: 'Coaching Business Operating System',
+    tags: 'Business · Systems · Operations',
+    description: 'Frameworks, workflows, and systems for delivering structured, human-centered coaching.',
+    cta: 'View Project',
     href: '#',
+    image: '/images/coaching_os_photo.jpg',
   },
   {
-    title: 'Coach Carisma',
-    tags: 'Education | Self-Mastery',
+    title: 'Coaching Client App',
+    tags: 'Product · UX · Client Tools',
+    description: 'A client-facing coaching tool exploring journaling, self-documentation, guided reflection, and habit support.',
+    cta: 'View Project',
     href: '#',
+    image: '/images/client_app_photo.jpg',
   },
   {
-    title: 'Healthcare Dashboard',
-    tags: 'Analytics | Technology',
+    title: 'Healthcare Ops Projects',
+    tags: 'Healthcare · Analytics · Process Improvement',
+    description: 'Dashboards, process improvements, and systems-focused healthcare projects.',
+    cta: 'View Project',
     href: '#',
+    image: '/images/healthcare_data_photo.jpg',
   },
 ]
 
@@ -124,9 +134,14 @@ export default function Home() {
                 href={project.href}
                 className="group block border-b border-r border-black"
               >
-                {/* Image placeholder */}
-                <div className="aspect-[4/3] bg-[#F2F1EE] w-full overflow-hidden">
-                  <div className="w-full h-full group-hover:scale-[1.02] transition-transform duration-500" />
+                {/* Image */}
+                <div className="relative aspect-[4/3] bg-[#F2F1EE] w-full overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                  />
                 </div>
                 {/* Info */}
                 <div className="px-6 py-5">
@@ -134,6 +149,10 @@ export default function Home() {
                     {project.title}
                   </h3>
                   <p className="text-[#888888] text-sm mt-1">{project.tags}</p>
+                  <p className="text-black text-sm mt-3">{project.description}</p>
+                  <span className="inline-block mt-4 text-sm font-inter font-semibold underline underline-offset-2">
+                    {project.cta}
+                  </span>
                 </div>
               </Link>
             </FadeIn>
