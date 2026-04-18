@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+img {
+  filter: grayscale(100%) !important;
+  transition: filter 1.5s linear !important;
+}
+
+img:hover {
+  filter: grayscale(0%) !important;
+}
+
+img.revealed {
+  filter: grayscale(0%) !important;
+  transition: filter 1.5s linear !important;
+}

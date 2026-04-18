@@ -20,7 +20,7 @@ export default function HeroPhoto() {
           src="/images/joshphoto_light_focused_wide_lo.jpeg"
           alt="Joshua Carisma"
           fill
-          className="object-cover object-[center_8%] grayscale brightness-125 scale-110"
+          className="object-cover object-[center_8%] brightness-125 scale-110"
           onError={() => setError(true)}
           priority
         />

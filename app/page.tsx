@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import FadeIn from '@/components/FadeIn'
 import HeroPhoto from '@/components/HeroPhoto'
+import RevealImages from '@/components/RevealImages'
 
 export const metadata: Metadata = {
   title: 'Joshua Carisma',
@@ -94,6 +95,7 @@ const articles = [
 export default function Home() {
   return (
     <div className="overflow-x-hidden">
+      <RevealImages />
 
       {/* ── HERO ─────────────────────────────────────────────────────────────── */}
       <section className="px-6 pt-8 pb-7 md:pt-10 md:pb-8">
