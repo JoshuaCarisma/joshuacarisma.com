@@ -10,14 +10,14 @@
   },
   "dependencies": {
     "next": "14.2.35",
-    "next-mdx-remote": "^5",
+    "next-mdx-remote": "^6.0.0",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@next/mdx": "^14",
     "@mdx-js/loader": "^3",
     "@mdx-js/react": "^3",
+    "@next/mdx": "^14",
     "@tailwindcss/typography": "^0.5",
     "@types/mdx": "^2",
     "@types/node": "^20",
