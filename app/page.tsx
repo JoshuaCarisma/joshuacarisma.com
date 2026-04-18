@@ -3,6 +3,7 @@ import Link from 'next/link'
 import FadeIn from '@/components/FadeIn'
 import HeroPhoto from '@/components/HeroPhoto'
 import RevealImages from '@/components/RevealImages'
+import Constellation from '@/components/Constellation'
 
 export const metadata: Metadata = {
   title: 'Joshua Carisma',
@@ -11,39 +12,6 @@ export const metadata: Metadata = {
 }
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
-
-const services = [
-  {
-    num: '01',
-    title: 'Healthcare Operations',
-    desc: 'Coordinating complex workflows, improving processes, and supporting care delivery teams.',
-  },
-  {
-    num: '02',
-    title: 'Coaching & Behavior Change',
-    desc: 'Health coaching, habit systems, and helping people take ownership of their growth.',
-  },
-  {
-    num: '03',
-    title: 'Technology & Analytics',
-    desc: 'Building tools, dashboards, and data-driven systems that reduce friction and waste.',
-  },
-  {
-    num: '04',
-    title: 'Project Management',
-    desc: 'Organizing people, timelines, and execution across complex, multi-team initiatives.',
-  },
-  {
-    num: '05',
-    title: 'Writing & Philosophy',
-    desc: 'Essays on health, systems thinking, self-mastery, and the examined life.',
-  },
-  {
-    num: '06',
-    title: 'Leadership & Service',
-    desc: 'Leading with integrity, developing others, and building toward something larger.',
-  },
-]
 
 const projects = [
   {
@@ -112,7 +80,7 @@ export default function Home() {
         </div>
 
         <div className="mt-7 md:mt-10 mb-7 md:mb-8 flex justify-center">
-          <p className="font-playfair italic text-[clamp(1.25rem,2.5vw,1.75rem)] text-black leading-relaxed text-center max-w-3xl">
+          <p className="font-inter font-bold text-black text-[1.44rem] leading-relaxed text-center max-w-3xl">
             [A coach, builder, and systems thinker exploring the future of
             health, work, and human growth.]
           </p>
@@ -154,36 +122,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── WHAT I DO ────────────────────────────────────────────────────────── */}
+      {/* ── WHO I AM ─────────────────────────────────────────────────────────── */}
       <section className="py-12 md:py-16 px-6 border-t border-black">
-        <div className="max-w-4xl mx-auto">
+        <FadeIn>
+          <h2 className="text-center font-inter font-bold text-[clamp(2rem,4vw,3rem)] tracking-tight mb-8 md:mb-10">
+            Who I Am
+          </h2>
+          <div className="max-w-[1010px] mx-auto">
+            <p className="font-inter font-bold text-black text-[1.44rem] leading-relaxed text-center mb-4">
+              I&apos;m Joshua Carisma — a coach, technologist, and systems thinker obsessed with one question: how do we help people become more capable of positive change?
+            </p>
+            <p className="font-inter font-bold text-black text-[1.44rem] leading-relaxed text-center mb-4">
+              That question pulls me toward health, psychology, philosophy, and spirituality. It shows up in the way I coordinate care, design coaching programs, build data systems, and write. The tools change. The mission doesn&apos;t.
+            </p>
+            <p className="font-inter font-bold text-black text-[1.44rem] leading-relaxed text-center">
+              I believe the best life is a designed one — and I&apos;ve dedicated my work to helping people build it.
+            </p>
+          </div>
+        </FadeIn>
+      </section>
+
+      {/* ── HOW IT ALL CONNECTS ──────────────────────────────────────────────── */}
+      <section className="py-12 md:py-16 px-6 border-t border-black">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          {/* Left column */}
           <FadeIn>
-            <h2 className="text-center font-inter font-bold text-[clamp(2rem,4vw,3rem)] tracking-tight mb-8 md:mb-10">
-              What I Do
+            <h2 className="font-inter font-bold text-[clamp(2rem,4vw,3rem)] tracking-tight mb-6">
+              How It All Connects
             </h2>
+            <p className="text-[#888888] text-base leading-relaxed mb-4">
+              I&apos;m a technologist and communicator whose work keeps returning to one question: how do we help people become more capable of positive change?
+            </p>
+            <p className="text-[#888888] text-base leading-relaxed">
+              That pulls me toward health, psychology, philosophy, and systems — and the tools, creativity, and leadership to act on them. Whether I&apos;m coordinating care, coaching, building dashboards, or writing — it&apos;s the same mission: help people live the fullest lives they possibly can.
+            </p>
           </FadeIn>
 
-          {services.map((service, i) => (
-            <FadeIn
-              key={service.num}
-              delay={i * 50}
-              className={`border-b border-black/10 ${i === 0 ? 'border-t' : ''}`}
-            >
-              <div className="flex items-start gap-8 py-4">
-                <span className="font-inter text-sm text-[#888888] w-12 shrink-0 pt-0.5 tabular-nums">
-                  [{service.num}]
-                </span>
-                <div className="flex-1">
-                  <h3 className="font-inter font-bold text-base md:text-lg text-black">
-                    {service.title}
-                  </h3>
-                  <p className="text-[#888888] text-sm mt-1.5 leading-relaxed">
-                    {service.desc}
-                  </p>
-                </div>
-              </div>
-            </FadeIn>
-          ))}
+          {/* Right column */}
+          <FadeIn delay={100}>
+            <Constellation />
+          </FadeIn>
         </div>
       </section>
 
