@@ -44,26 +44,29 @@ const articles = [
   {
     date: 'Apr 10, 2026',
     readTime: '5 min read',
-    title: 'The Case for Preventive Healthcare',
+    title: 'Choosing Health in the 21st Century',
     excerpt:
-      'Why our medical system rewards treatment over prevention — and what a different model could look like.',
+      'Modern life no longer supports health by default. Why intentional choices, better systems, and deeper awareness matter more than ever.',
     href: '/blog',
+    image: '/images/21century_photo.jpg',
   },
   {
     date: 'Mar 28, 2026',
     readTime: '7 min read',
-    title: 'Systems Thinking in Practice',
+    title: 'Healthcare Should Start Before You Get Sick',
     excerpt:
-      'Most problems are not isolated incidents. They are symptoms of deeper structural patterns.',
+      'A better model of healthcare would treat movement, connection, routine, and prevention as part of care — not separate from it.',
     href: '/blog',
+    image: '/images/preventative_health_photo.jpg',
   },
   {
     date: 'Mar 12, 2026',
     readTime: '4 min read',
-    title: 'On Building Better Habits',
+    title: 'Technology Should Reduce Friction, Not Create More',
     excerpt:
-      'The science and philosophy behind behavioral change, and why willpower is the wrong tool.',
+      'The best tools make better action easier. Technology should support clarity, care, and progress instead of adding more noise.',
     href: '/blog',
+    image: '/images/tech_stress_photo.jpg',
   },
 ]
 
@@ -173,9 +176,14 @@ export default function Home() {
           {articles.map((article, i) => (
             <FadeIn key={article.title} delay={i * 100}>
               <Link href={article.href} className="group block">
-                {/* Image placeholder */}
-                <div className="aspect-[3/2] bg-[#F2F1EE] mb-3 overflow-hidden">
-                  <div className="w-full h-full group-hover:scale-[1.02] transition-transform duration-500" />
+                {/* Image */}
+                <div className="relative aspect-[3/2] bg-[#F2F1EE] mb-3 overflow-hidden">
+                  <Image
+                    src={article.image}
+                    alt={article.title}
+                    fill
+                    className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                  />
                 </div>
 
                 <p className="text-[#888888] text-xs tracking-[0.12em] uppercase mb-2">
